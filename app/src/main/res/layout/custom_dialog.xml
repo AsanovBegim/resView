@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:minWidth="280dp"
+    android:minHeight="460dp">
+
+    <FrameLayout
+        android:id="@+id/frameL"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+        android:id="@+id/tView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/standart_margin"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="@string/Kvartira"
+        android:textColor="@color/white"/>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyler1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginStart="@dimen/standart_margin"
+        android:layout_marginEnd="@dimen/standart_margin"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@id/btnPositive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/frameL"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:orientation="vertical"
+        app:spanCount="6"/>
+
+    <TextView
+        android:id="@+id/btnPositive"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:minWidth="64dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textSize="15sp"
+        android:text="@string/vibor"
+        android:textColor="@color/design_default_color_primary"
+        android:textAllCaps="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/btnNegative"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:minWidth="64dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textSize="15sp"
+        android:text="@string/otmena"
+        android:textColor="@color/design_default_color_primary"
+        android:textAllCaps="true"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnPositive"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
